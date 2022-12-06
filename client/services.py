@@ -6,7 +6,7 @@ from db import db_menu_connect as db
 
 async def process_start_command(message: types.Message):
     try:
-        await bot.send_message(message.from_user.id, 'Hello! Click on action', reply_markup=kb_client.keys_main)
+        await bot.send_message(message.from_user.id, 'Hello! Click on action')
         await message.delete()
     except:
         await message.reply('Write personal message, please!')
