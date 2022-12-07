@@ -1,15 +1,13 @@
 import requests
-from pprint import pprint
 from datetime import datetime
 from conf import WEATHER_TOKEN
 
 
-def get_weather(city, token):
+def get_weather(city):
     try:
         request = requests.get(f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid'
-                               f'={token}&units=metric')
+                               f'={WEATHER_TOKEN}&units=metric')
         data = request.json()
-        # pprint(data)
 
         city = data['name']
         current_temp = data['main']['temp']
@@ -26,6 +24,3 @@ def get_weather(city, token):
     except:
         return f'Invalid city name!'
 
-
-cit = "pattaya"
-print(get_weather(cit, WEATHER_TOKEN))

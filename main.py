@@ -3,7 +3,7 @@ from handlers import admin, client
 from client import censor
 from aiogram.utils import executor
 from db import db_menu_connect as db
-from db.phrases import PHRASES_DATA
+from db.ru_dict import PHRASES_DATA
 
 
 async def start_message(_):

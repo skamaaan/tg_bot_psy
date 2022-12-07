@@ -10,7 +10,7 @@ date_callback = CallbackData('simple_calendar', 'act', 'year', 'month', 'day')
 time_callback = CallbackData('simple_time', 'act', 'time')
 
 
-class SimpleDate:
+class Date:
 
     async def start_date(
             self,
@@ -88,7 +88,7 @@ class SimpleDate:
         return return_data
 
 
-class SimpleTime:
+class Time:
 
     async def start_time(self) -> InlineKeyboardMarkup:
         """
