@@ -6,7 +6,7 @@ from aiogram.contrib.middlewares.logging import LoggingMiddleware
 mem_storage = MemoryStorage()
 
 # webhook settings
-WEBHOOK_HOST = 'https://skaman.v6.navy'
+WEBHOOK_HOST = 'https://spindelmann.v6.navy'
 WEBHOOK_PATH = '/'
 WEBHOOK_URL = f"{WEBHOOK_HOST}{WEBHOOK_PATH}"
 
