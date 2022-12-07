@@ -11,7 +11,7 @@ WEBHOOK_PATH = '/'
 WEBHOOK_URL = f"{WEBHOOK_HOST}{WEBHOOK_PATH}"
 
 # webserver settings
-WEBAPP_HOST = 'localhost'  # or ip
+WEBAPP_HOST = '84.252.74.249'  # or ip
 WEBAPP_PORT = 3001
 
 WEATHER_TOKEN = os.getenv("OW_TOKEN")

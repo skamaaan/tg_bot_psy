@@ -15,6 +15,5 @@ def register_handlers_client(dp: Dispatcher):
     dp.register_callback_query_handler(services.appointment_button, text="appointment")
     dp.register_callback_query_handler(services.date_selector, date_callback.filter())
     dp.register_callback_query_handler(services.time_selector, time_callback.filter())
-    dp.register_callback_query_handler(services.weather, text="weather")
     dp.register_message_handler(services.weather_message, Text(startswith=['погода'], ignore_case=True))
     dp.register_message_handler(services.menu_command, Text(equals=['menu'], ignore_case=True))

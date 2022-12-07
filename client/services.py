@@ -48,11 +48,6 @@ async def menu_command(message):
     await db.db_read(message)
 
 
-async def weather(callback: types.CallbackQuery):
-    await callback.message.answer("В каком городе спросить про погоду?"
-                                  "Напишите 'погода в...'")
-
-
 async def weather_message(message: types.Message):
     city = message.text.split()
     await message.answer(get_weather(city[-1]))
@@ -60,7 +55,7 @@ async def weather_message(message: types.Message):
 
 async def appointment_button(callback: types.CallbackQuery):
     await callback.message.edit_text("Выберите дату: ",
-                                  reply_markup=await Date().start_date())
+                                     reply_markup=await Date().start_date())
 
 
 async def date_selector(callback: types.CallbackQuery, callback_data: dict):
