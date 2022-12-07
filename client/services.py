@@ -59,7 +59,7 @@ async def weather_message(message: types.Message):
 
 
 async def appointment_button(callback: types.CallbackQuery):
-    await callback.message.answer("Выберите дату: ",
+    await callback.message.edit_text("Выберите дату: ",
                                   reply_markup=await Date().start_date())
 
 
