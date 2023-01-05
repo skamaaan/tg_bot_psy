@@ -2,7 +2,9 @@ import os
 from aiogram import Bot, Dispatcher
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.contrib.middlewares.logging import LoggingMiddleware
+from dotenv import load_dotenv
 
+load_dotenv()
 mem_storage = MemoryStorage()
 
 # webhook settings
