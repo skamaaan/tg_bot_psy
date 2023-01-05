@@ -79,11 +79,11 @@ class Date:
         # user navigates to previous month, editing message with new calendar
         if data['act'] == "PREV-MONTH":
             prev_date = temp_date - timedelta(days=1)
-            await query.message.edit_reply_markup(await self.start_calendar(int(prev_date.year), int(prev_date.month)))
+            await query.message.edit_reply_markup(await self.start_date(int(prev_date.year), int(prev_date.month)))
         # user navigates to next month, editing message with new calendar
         if data['act'] == "NEXT-MONTH":
             next_date = temp_date + timedelta(days=31)
-            await query.message.edit_reply_markup(await self.start_calendar(int(next_date.year), int(next_date.month)))
+            await query.message.edit_reply_markup(await self.start_date(int(next_date.year), int(next_date.month)))
         # at some point user clicks DAY button, returning date
         return return_data
 
